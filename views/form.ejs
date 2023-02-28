@@ -1,0 +1,104 @@
+<%- include('_header') -%>
+
+
+<div class="row justify-content-around" style="margin-left: 15%;">
+    <div class="col-4">
+        <h6>Solicitud prestamos comerciales</h6>
+    </div>
+    <div class="col-4" style="margin-left: 30%;">
+        <h6><%= fecha %></h6>
+    </div>
+</div>
+
+<div class="container">
+    <form action="/solicitud" method="POST">
+        
+    <%- include('_datosPersonales') %>    
+    <%- include('_datosNegocio') %>        
+    <%- include('_datosPrestamo') %>        
+    <%- include('_referencias') %>
+    <%- include('_coSolicitante') %> 
+    </form>
+
+</div>
+    
+
+<script src="https://code.jquery.com/jquery-3.6.3.slim.js" integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
+
+<script>
+    window.onload = function() {
+            $('#prestamoLink').addClass('active')
+    }
+
+    function go(from,to){
+        $(from).prop('hidden',true)
+        $(to).prop('hidden', false)
+    }
+
+    var type_timer;
+    var finished_writing_interval = 3000;
+    var my_input = document.getElementById("exampleFormControlInput1");
+
+    //Start timeout when user start typing
+    my_input.addEventListener('keyup', function () {
+        clearTimeout(type_timer);
+        type_timer = setTimeout(finished_typing, finished_writing_interval);
+    });
+
+    //Clear timeout on key down event
+    my_input.addEventListener('keydown', function () {
+        clearTimeout(type_timer);
+    });
+
+    //This function runs when user has finished writing in input
+    function finished_typing () {
+        console.log(checkNumber(my_input.value))
+        console.log(my_input.value)
+        console.log("User finished typing");
+    }
+
+    function checkNumber(number){
+        let regex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/i;
+        return regex.test(number);
+    }
+    
+    function checkCedula(number){
+        let regex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{7}[-\s\.]?[0-9]{1}$/i;
+        return regex.test(number);
+    }
+    
+    function checkMail(email){
+        let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+        return regex.test(email)
+    }
+    
+    function checkConyuge(conyuge){
+        checkCedula(conyuge.cedula)
+        checktelefono(conyuge.telefono)
+        if(conyuge.empleador){
+            checktelefono(conyuge.empleador.telefono)
+        }
+        return 1
+    }
+    
+    (() => {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+
+            form.classList.add('was-validated')
+            }, false)
+        })
+        })()
+    
+    </script>
+<%- include('_footer') %>

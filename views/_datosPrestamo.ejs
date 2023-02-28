@@ -1,0 +1,74 @@
+<div class="card" style="margin-top: 1rem;" id="prestamo" hidden>
+    <div class="card-header" style="text-align: center;">
+        <h5>Datos Del Prestamo</h5>
+    </div>
+
+    <div class="card-body" style="padding-left: 16px;padding-right: 10px;margin-left: 13px;margin-right: 13px">
+        <div class="row g-2">
+            
+            <div class="form-floating col-md-6 mb-3">
+                <input type="number" class="form-control" id="loan" name="loan" placeholder="name@example.com">
+                <label for="loan" style="color: gray;" required>Monto Solicitado</label>
+            </div>
+            <div class="form-floating col-md-6 mb-3">
+                <select class="form-select" id="loanPurpose" name="loanPurpose"  onchange="activateOther()">
+                  <option value="1">Capital de Trabajo</option>
+                  <option value="2">Adquisición de activo</option>
+                  <option value="3">Sustitución de pasivos</option>
+                  <option value="4">Otro</option>
+
+                </select>
+                <label for="loanPurpose">Finalidad</label>
+            </div>
+            <div class="form-floating col-md-12 mb-3">
+                <input type="text" class="form-control" id="purpose" name="purpose" placeholder="name@example.com" disabled>
+                <label for="purpose" style="color: gray;">Finalidad:</label>
+            </div>
+
+            <div class="form-floating col-md-6 mb-3">
+                <select class="form-select" id="loanTime" name="loanTime" aria-label="Floating label select example">
+                  <option value="1">30 días</option>
+                  <option value="2">60 días</option>
+                  <option value="3">90 días</option>
+                  <option value="4">120 días</option>
+                </select>
+                <label for="loanTime">Plazos</label>
+            </div>
+
+            <div class="form-floating col-md-6 mb-3">
+                <select class="form-select" id="loanMode" name="loanMode" aria-label="Floating label select example">
+                  <option value="1">Préstamo a credito</option>
+                  <option value="2">Línea de crédito</option>
+                </select>
+                <label for="loanMode">Modalidad de prestamo</label>
+            </div>
+    
+
+            <div id="buttons3" class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group" role="group" aria-label="First group">
+                  <a href="#" class="btn btn-outline-primary" onclick="go('#prestamo','#negocio')">Datos Negocio</a>
+                </div>
+                <div class="input-group">
+                    <a href="#" class="btn btn-outline-primary" onclick="go('#prestamo','#referencias')">Referencias</a>
+                </div>
+              </div>
+        </div>
+        
+        </div>
+        </div>
+
+
+        <script>
+            function activateOther(){
+                var val = $('#finalidadSelect').find(":selected").val();
+                if (val === '4') {
+                    $('#finalidadText').prop('disabled',false)
+                    $('#finalidadText').prop('required',true)
+                }else {
+                    $('#finalidadText').prop('disabled',true)
+                    $('#finalidadText').val('')
+                    $('#finalidadText').prop('required',false)
+
+                }
+            }
+        </script>

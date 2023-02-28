@@ -1,0 +1,80 @@
+<%- include('_header') -%>
+
+    <div class="container">
+    </div>
+
+    <div class="container text-center">
+        <div class="clearfix">
+            <div class="d-none d-sm-block">
+                <img src="/assets/img/Mesa de trabajo 1.png" class="col-md-6 float-md-end mb-3 ms-md-3" alt="..." height="600px" width="400px">
+            </div>
+            <h3>
+                Quienes somos?
+            </h3>
+            <p>
+                A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.
+                A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.
+                A paragraph of placeholder text. We're using it here to show the use of the clearfix class. We're adding quite a few meaningless phrases here to demonstrate how the columns interact here with the floated image.
+
+            </p>
+            
+            <p>
+                As you can see the paragraphs gracefully wrap around the floated image. Now imagine how this would look with some actual content in here, rather than just this boring placeholder text that goes on and on, but actually conveys no tangible information at. It simply takes up space and should not really be read.
+                As you can see the paragraphs gracefully wrap around the floated image. Now imagine how this would look with some actual content in here, rather than just this boring placeholder text that goes on and on, but actually conveys no tangible information at. It simply takes up space and should not really be read.
+            </p>
+            <form action="/solicitud">
+                <button type="submit" class="btn" style="background-color: #ee7408;"><h5 style="color: white">Solicita tu prestamo</h5></button>
+            </form>
+          </div>
+    </div>
+
+    <div class="container-sm" style="margin-top: 2rem;">
+        <div class="card">
+            <div class="card-header" style="text-align: center;">
+                <h4>Calculadora de Prestamos
+            </div>
+    
+            <div class="card-body" style="padding-left: 16px;padding-right: 10px;margin-left: 13px;margin-right: 13px">
+                <div class="container text-center">
+                    <div class="row align-items-center" >
+                      <div class="col" ">
+                        
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Monto del prestamo</span>
+                                <input type="number" id = "totalInput" class="form-control" value="100" min="100" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Tasa de interes (%)</span>
+                                <input type="number" id="taxInput" class="form-control" value="1" aria-label="Username" aria-describedby="basic-addon1" min="1" max="100">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Cantidad de Cuotas</span>
+                                <input type="number" id = "timeInput" class="form-control" value="1" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                            <button class="btn" style="background-color: #ee7408; color: white;"onclick="calculate()">Calcular</button>
+                      </div>
+                      <div class="col">
+                        <h2 id="cuota">RD$0.00</h2>
+                        <h4>Valor de cuota</h4>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.js" integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
+    <script>
+            window.onload = function() {
+                $('#indexLink').addClass('active')
+            }
+
+        function calculate(){
+            let total = parseInt($('#totalInput').val())
+            let tax = parseInt($('#taxInput').val())
+            let time = parseInt($('#timeInput').val())
+            
+            let cuota = (total * (1 + (tax/100)))/time
+            console.log($('#cuota').text('RD$'+cuota.toFixed(2)))
+        }
+    </script>
+<%- include('_footer'); -%>

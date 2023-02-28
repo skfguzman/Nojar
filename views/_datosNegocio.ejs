@@ -1,0 +1,72 @@
+<div class="card" style="margin-top: 1rem;" id="negocio" hidden>
+    <div class="card-header" style="text-align: center;">
+        <h5>Datos Del Negocio</h5>
+    </div>
+
+    <div class="card-body" style="padding-left: 16px;padding-right: 10px;margin-left: 13px;margin-right: 13px">
+        <div class="row g-2">
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="businessType" name="businessType" placeholder="name@example.com" required>
+                <label for="businessType" style="color: gray;">Tipo de actividad</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="businessName" name="businessName" placeholder="name@example.com" required>
+                <label for="businessName" style="color: gray;">Nombre del negocio</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="businessPhone" name="businessPhone" placeholder="name@example.com" required>
+                <label for="businessPhone" style="color: gray;">Telefono</label>
+            </div>
+
+
+            <div class="form-floating col-md-6 mb-3">
+                <textarea class="form-control" id="businessAddress" name="businessAddress" required></textarea>
+                <label for="businessAddress">Direccion</label>
+            </div>
+            <div class="form-floating col-md-2 mb-3">
+                <select class="form-select" id="businessLocaType" name="businessLocaType" >
+                  <option value="1" selected>Propio</option>
+                  <option value="2">Alquilado</option>
+                
+                </select>
+                <label for="businessLocaType">Local</label>
+            </div>
+            <div class="form-floating col-md-2 mb-3">
+                <input class="form-control" id="businessTime" name="businessTime">
+                <label for="businessTime" required>Antiguedad</label>
+            </div>
+            <div class="form-floating col-md-2 mb-3">
+                <input type="number" class="form-control" id="businessAVG" name="businessAVG">
+                <label for="businessAVG" required>Promedio de Ventas</label>
+            </div>
+
+
+
+            <div class="form-floating col-md-6 mb-3">
+                <input type="text" class="form-control" id="lessorName" name="lessorName" placeholder="name@example.com">
+                <label for="lessorName" style="color: gray;">Nombre del Arrendador</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="lessorPhone" name="lessorPhone" placeholder="name@example.com">
+                <label for="lessorPhone" style="color: gray;" >Telefono</label>
+            </div>
+            <div class="form-floating col-md-2 mb-3">
+                <input type="text" class="form-control" id="lessorPrice" name="lessorPrice" placeholder="name@example.com">
+                <label for="lessorPrice" style="color: gray;">Monto de Alquiler</label>
+            </div>
+
+
+
+            <div id="buttons2" class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group" role="group" aria-label="First group">
+                  <a href="#" class="btn btn-outline-primary" onclick="go('#negocio','#personales')">Datos Personales</a>
+
+                </div>
+                <div class="input-group">
+                    <a href="#" class="btn btn-outline-primary" onclick="go('#negocio','#prestamo')">Datos del Prestamo</a>
+                </div>
+              </div>
+        </div>
+        
+        </div>
+    </div>

@@ -1,0 +1,271 @@
+<div class="card" style="margin-top: 1rem;" id="coSolicitante" hidden>
+    <div class="card-header" style="text-align: center;">
+        <h5>Datos del Co-Solicitante</h5>
+    </div>
+
+    <div class="card-body" style="padding-left: 16px;padding-right: 10px;margin-left: 13px;margin-right: 13px">
+        <div class="row g-2">
+
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="coNombre" name="coNombre" placeholder="name@example.com" required>
+                <label for="coNombre" style="color: gray;">Nombre</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                <label for="floatingInput" style="color: gray;">Apellidos</label>
+            </div>
+            <div class="form-floating col-md-1 mb-3">
+                <select class="form-select" id="vinculoSelect" name="vinculoSelect" onchange="activateVinculo()">
+                <option value="1">No</option>
+                <option value="2">Si</option>
+
+                </select>
+                <label for="vinculoSelect">Vinculo</label>
+            </div>
+            <div class="form-floating col-md-3 mb-3">
+                <input type="text" class="form-control" id="vinculacion" placeholder="name@example.com" disabled>
+                <label for="vinculacion" style="color: gray;">Tipo de vinculación</label>
+            </div>
+
+
+
+            <div class="form-floating col-md-4 mb-3">
+                <input type="date" class="form-control" id="coBirthday" name="coBirthday" placeholder="name@example.com" required>
+                <label for="coBirthday" style="color: gray;">Fecha de Nacimiento</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="coId" name="coId" placeholder="name@example.com" required>
+                <label for="coId" style="color: gray;">Cedula o Pasaporte</label>
+            </div>
+            <div class="form-floating col-md-2 mb-3">
+                <select class="form-select" id="coNacionality" name="coNacionality" aria-label="Floating label select example">
+                <option value="1">Dominicano</option>
+                <option value="2">Extranjero</option>
+
+                </select>
+                <label for="coNacionality">Nacionalidad</label>
+            </div>
+            <div class="form-floating col-md-2 mb-3">
+                <select class="form-select" id="coCivilState" name="coCivilState" aria-label="Floating label select example">
+                  <option value="1">Soltero</option>
+                  <option value="2">Casado</option>
+
+                </select>
+                <label for="coCivilState">Estado civil</label>
+            </div>
+
+
+            <div class="form-floating col-md-6 mb-3">
+                <textarea class="form-control" id="coAddress" name="coAddress" required></textarea>
+                <label for="coAddress">Direccion</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="coCity" name="coCity" required>
+                <label for="coCity" style="color: gray;">Ciudad</label>
+            </div>
+            <div class="form-floating col-md-2 mb-3">
+                <input type="number" class="form-control" id="coDependents" name="coDependents" placeholder="name@example.com" min="0" value="0">
+                <label for="coDependents" style="color: gray;">No. Dependientes</label>
+            </div>
+            
+
+
+            <div class="form-floating col-md-4 mb-3">
+                <input type="tel" class="form-control" id="coPhoneHouse" name="coPhoneHouse" placeholder="name@example.com">
+                <label for="coPhoneHouse" style="color: gray;">Telefono casa</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="tel" class="form-control" id="coPhone" name="coPhone" placeholder="name@example.com">
+                <label for="coPhone" style="color: gray;">Celular</label>
+            </div>
+            <div class="form-floating col-md-2 mb-3">
+                <select class="form-select" id="coHouseType" name="coHouseType">
+                <option value="1">Alquilada</option>
+                <option value="2">Familiar</option>
+                <option value="3">Propia</option>
+                <option value="4">Financiada</option>
+
+                </select>
+                <label for="coHouseType">Vivienda</label>
+            </div>
+            <div class="form-floating col-md-2 mb-3">
+                <input type="number" class="form-control" id="coTime" name="coTime" placeholder="name@example.com">
+                <label for="coTime" style="color: gray;">Antiguedad en vivienda</label>
+            </div>
+
+
+            <h5 class="card-title">Ocupación</h5>
+
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="coJob" name="coJob" placeholder="name@example.com" required>
+                <label for="coJob" style="color: gray;">Ocupación</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="coJobTime" name="coJobTime" placeholder="name@example.com" required>
+                <label for="coJobTime" style="color: gray;">Antiguedad en el trabajo</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="coOldJobTime" name="coOldJobTime" placeholder="name@example.com">
+                <label for="coOldJobTime" style="color: gray;">Antiguedad en el trabajo anterior</label>
+            </div>
+
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="coJobName" name="coJobName" placeholder="name@example.com">
+                <label for="coJobName" style="color: gray;">Empleador o Negocio</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <textarea class="form-control" id="coJobAdd" name="coJobAdd" placeholder="name@example.com"></textarea>
+                <label for="coJobAdd" style="color: gray;">Direccion</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="tel" class="form-control" id="coJobPhone" name="coJobPhone" placeholder="name@example.com">
+                <label for="coJobPhone" style="color: gray;">Telefono o Celcular</label>
+            </div>
+
+            <h5 class="card-title">Conyuge</h5>
+
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="coCouple" name="coCouple" placeholder="name@example.com">
+                <label for="coCouple" style="color: gray;">Nombre esposo(a)</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="coCoupleJob" name="coCoupleJob" placeholder="name@example.com">
+                <label for="coCoupleJob" style="color: gray;">Lugar de trabajo</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="tel" class="form-control" id="coCouplePhone" name="coCouplePhone" placeholder="name@example.com">
+                <label for="coCouplePhone" style="color: gray;">Telefono o Celcular</label>
+            </div>
+
+
+
+            <h5 class="card-title">Referencias Comerciales</h5>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="coComercial1" name="coComercial1" placeholder="name@example.com" required>
+                <label for="coComercial1" style="color: gray;">Nombre</label>
+            </div>
+
+            <div class="form-floating col-md-4 mb-3">
+                <textarea class="form-control"  id="coComercial1Add" name="coComercial1Add"required ></textarea>
+                <label for="coComercial1">Direccion</label>
+            </div>
+
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="coComercial1phone" name="coComercial1phone" placeholder="name@example.com"required>
+                <label for="coComercial1phone" style="color: gray;">Telefono</label>
+            </div>
+
+
+
+            <div class="form-floating col-md-4 mb-3">
+                <input type="email" class="form-control" id="coComercial2" name="coComercial2" placeholder="name@example.com"required>
+                <label for="coComercial2" style="color: gray;">Nombre</label>
+            </div>
+
+            <div class="form-floating col-md-4 mb-3">
+                <textarea class="form-control"  id="coComercial2Add" name="coComercial2Add"required></textarea>
+                <label for="coComercial2Add">Direccion</label>
+            </div>
+
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="coComercial2Phone" name="coComercial2Phone" placeholder="name@example.com" required>
+                <label for="coComercial2Phone" style="color: gray;">Telefono</label>
+            </div>
+
+
+            <h5 class="card-title">Referencias Familiares</h5>
+            <div class="form-floating col-md-3 mb-3">
+                <input type="text" class="form-control" id="coFammily1" name="coFammily1" required>
+                <label for="coFammily1" style="color: gray;">Nombre</label>
+            </div>
+            <div class="form-floating col-md-3 mb-3">
+                <textarea class="form-control"  id="coFammily1Relation" name="coFammily1Relation" required></textarea>
+                <label for="coFammily11Relation">Parentesco</label>
+            </div>
+            <div class="form-floating col-md-3 mb-3">
+                <textarea class="form-control" id="coFammily1Add" name="coFammily1Add" required ></textarea>
+                <label for="coFammily1Add">Direccion</label>
+            </div>
+
+            <div class="form-floating col-md-3 mb-3">
+                <input type="text" class="form-control" id="coFamily1Phone" name="coFamily11Phone" placeholder="name@example.com" required>
+                <label for="coFamily1Phone" style="color: gray;">Telefono</label>
+            </div>
+
+            
+
+
+            <div class="form-floating col-md-3 mb-3">
+                <input type="text" class="form-control" id="coFamily2" name="coFamily2" required>
+                <label for="coFamily2" style="color: gray;">Nombre</label>
+            </div>
+            <div class="form-floating col-md-3 mb-3">
+                <textarea class="form-control"  id="coFamily2Relation" name="coFamily2Relation" required></textarea>
+                <label for="coFamily2Relation">Parentesco</label>
+            </div>
+            <div class="form-floating col-md-3 mb-3">
+                <textarea class="form-control" id="coFamily2Add" name="coFamily2Add" required></textarea>
+                <label for="coFamily2Add">Direccion</label>
+            </div>
+
+            <div class="form-floating col-md-3 mb-3">
+                <input type="text" class="form-control" id="coFamily2Phone" name="coFamily2Phone" placeholder="name@example.com" required>
+                <label for="coFamily2Phone" style="color: gray;">Telefono</label>
+            </div>
+
+
+
+
+            <div class="form-floating col-md-12 mb-3 ">
+                <p class="text-justify">
+                    El cliente autoriza expresa y formalmente a suministrar a centros de información crediticia la información patrimonial y extra patrimonial
+                    necesaria a los fines de evaluación del crédito por parte de otras instituciones suscriptores de dichos centros de información, reconociendo y
+                    garantizando que la revelación de dichas informaciones por parte de sus respectivos empleados, funcionarios y accionistas no conllevara
+                    violación de secreto profesional a los efectos del artículo 377 del Código Penal, ni generará responsabilidad bajo los artículos 1382 y siguientes del Código Civil, ni bajo ningún otro texto legal, al tiempo de renunciar expresa y formalmente al ejercicio de a cualquier acción o
+                    demanda a los fines de reclamación de daños y perjuicios por dicha causa o motivos, o por suministro de información inexacta y prometiendo la sumisión de sus representantes, accionistas y demás causahabientes a lo pactado en este artículo en virtud de las disposiciones del
+                    artículo 1120 del Código Civil. 
+                </p>
+            </div>
+
+
+            <div id="buttons5" class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group" role="group" aria-label="First group">
+                  <a href="#" class="btn btn-outline-primary" onclick="go('#coSolicitante','#referencias')">Referencias</a>
+
+                </div>
+                <div class="input-group">
+                    <button type="submit" class="btn btn-primary" onclick="activateVisuals()">Enviar Solicitud</a>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+
+        function activateVinculo(){
+            var val = $('#vinculoSelect').find(":selected").val();
+            if (val === '2') {
+                $('#vinculoText').prop('disabled',false)
+            }else {
+                $('#vinculoText').prop('disabled',true)
+                $('#vinculoText').val('')
+
+            }
+        }
+
+        function activateVisuals(){
+            
+            $('#buttons1').prop('hidden',true)
+            $('#buttons2').prop('hidden',true)
+            $('#buttons3').prop('hidden',true)
+            $('#buttons4').prop('hidden',true)
+
+            $('#personales').prop('hidden', false)
+            $('#negocio').prop('hidden', false)
+            $('#prestamo').prop('hidden', false)
+            $('#referencias').prop('hidden', false)
+            $('#coSolicitantes').prop('hidden', false)
+        }
+    </script>

@@ -1,0 +1,115 @@
+<div class="card" id="personales">
+    <div class="card-header" style="text-align: center;">
+        <h5>Datos Personales</h5>
+    </div>
+
+    <div class="card-body" style="padding-left: 16px;padding-right: 10px;margin-left: 13px;margin-right: 13px">
+        <div class="row g-2">
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="name" name="name"" required>
+                <label for="name" style="color: gray;">Nombre</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="name@example.com" required>
+                <label for="lastName" style="color: gray;">Apellidos</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="alias" name="alias" placeholder="name@example.com">
+                <label for="alias" style="color: gray;">Alias</label>
+            </div>
+
+
+            <div class="form-floating col-md-4 mb-3">
+                <input type="date" class="form-control" id="birthDay" name="birthDay" placeholder="name@example.com" required >
+                <label for="birthDay" style="color: gray;">Fecha de Nacimiento</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="id" name="id" placeholder="name@example.com" required>
+                <label for="id" style="color: gray;">Cedula o Pasaporte</label>
+            </div>
+            <div class="form-floating col-md-2 mb-3">
+                <select class="form-select" id="nacionality" name="nacionality" aria-label="Floating label select example">
+                <option value="1">Dominicano</option>
+                <option value="2">Extranjero</option>
+
+                </select>
+                <label for="nacionality">Nacionalidad</label>
+            </div>
+            <div class="form-floating col-md-2 mb-3">
+                <select class="form-select" id="civilState" name="civilState" aria-label="Floating label select example">
+                    <option selected>Estado</option>
+                    <option value="1">Soltero</option>
+                    <option value="2">Casado</option>
+                </select>
+                <label for="civilState">Estado civil</label>
+            </div>
+
+
+
+            <div class="form-floating col-md-6 mb-3">
+                <textarea class="form-control" id="address" name="address" required></textarea>
+                <label for="address">Direccion</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="city" name="city" placeholder="name@example.com" required>
+                <label for="city" style="color: gray;">Ciudad</label>
+            </div>
+            <div class="form-floating col-md-2 mb-3">
+                <input type="number" class="form-control" id="dependents" name="dependents" placeholder="name@example.com" min="0" value="0">
+                <label for="dependents" style="color: gray;">No. Dependientes</label>
+            </div>
+            
+
+
+            <div class="form-floating col-md-4 mb-3">
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+                <label for="phone" style="color: gray;">Telefono o Celular</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="email" class="form-control" id="mail" name="mail" placeholder="name@example.com">
+                <label for="mail" style="color: gray;">Correo</label>
+            </div>
+            <div class="form-floating col-md-2 mb-3">
+                <select class="form-select" id="dwelling" name="dwelling" aria-label="Floating label select example">
+                <option value="1">Alquilada</option>
+                <option value="2">Familiar</option>
+                <option value="3">Propia</option>
+                <option value="4">Financiada</option>
+
+                </select>
+                <label for="dwelling">Vivienda</label>
+            </div>
+            <div class="form-floating col-md-2 mb-3">
+                <input type="number" class="form-control" id="dwellingTime" name="dwellingTime" required>
+                <label for="dwellingTime" style="color: gray;">Antiguedad en vivienda</label>
+            </div>
+
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="couple" name="couple">
+                <label for="couple" style="color: gray;">Nombre Esposo(a)</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="coupleId" name="coupleId" placeholder="name@example.com">
+                <label for="coupleId" style="color: gray;">Cedula o Pasaporte</label>
+            </div>
+            <div class="form-floating col-md-4 mb-3">
+                <input type="text" class="form-control" id="couplePhone" name="couplePhone" placeholder="name@example.com">
+                <label for="couplePhone" style="color: gray;">Telefono o Celcular</label>
+            </div>
+
+
+            <div class="form-floating col-md-6 mb-3">
+                <input type="text" class="form-control" id="job" name="job" placeholder="name@example.com">
+                <label for="job" style="color: gray;">Empleador o Negocio</label>
+            </div>
+            <div class="form-floating col-md-6 mb-3">
+                <input type="text" class="form-control" id="jobPhone" name="jobPhone" placeholder="name@example.com">
+                <label for="jobPhone" style="color: gray;">Telefono o Celcular</label>
+            </div>
+
+
+            <a href="#" class="btn btn-primary" id="buttons1" onclick="go('#personales','#negocio')">Siguiente</a>
+        </div>
+        
+    </div>
+</div>
